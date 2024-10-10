@@ -1,4 +1,4 @@
-name: ar
+name: AR
 description: Module to read UNIX ar files
 categories:
   - OS

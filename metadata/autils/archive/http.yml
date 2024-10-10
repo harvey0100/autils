@@ -1,0 +1,16 @@
+name: HTTPD
+description: Module to manage Apache HTTP Server configurations
+categories:
+  - Web
+  - Server
+maintainers:
+  - name: Alice Johnson
+    email: alice.j@example.com
+    github_usr_name: alicejohnson 
+supported_platforms:
+  - Ubuntu 20.04
+  - Debian 11
+  - CentOS Stream 8
+tests:
+  - tests/autils/web/httpd.py
+remote: true

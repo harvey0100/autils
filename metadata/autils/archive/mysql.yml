@@ -1,0 +1,15 @@
+name: MySQL
+description: Module for managing MySQL database connections and queries
+categories:
+  - Database
+  - SQL
+maintainers:
+  - name: Bob Smith
+    email: bob.smith@example.com
+    github_usr_name: bobsmith
+supported_platforms:
+  - Ubuntu 22.04
+  - Fedora 36
+tests:
+  - tests/autils/database/mysql.py
+remote: false
