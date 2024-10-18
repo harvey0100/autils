@@ -30,3 +30,23 @@ jobs:
         uses: avocado-framework/avocado-ci-tools@main
         with:
           avocado-static-checks: true
+
+
+  api-stability-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Autils code from PR
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Fetch and checkout tests from main
+        run: |
+          git fetch origin main
+          git checkout origin/main -- tests/
+
+      - name: Install Avocado to run tests
+        run: pip3 install 'avocado-framework<104.0'
+
+      - name: Run API stability tests
+        run: ./tests/test_module.py metadata/autils/archive/ar.yml
